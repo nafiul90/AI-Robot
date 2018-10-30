@@ -1,0 +1,18 @@
+# each line starting with a # symbol is meant for comments
+# they need to be ignored when you're processing the input file
+# the first uncommented line of the map file gives you the width and height of the map
+1200 800
+# number of obstacles, N
+5
+# each of the next N lines (uncommented) will give you the description of the obstacles
+#
+circle 450 575 80
+circle 250 130 80
+circle 200 330 30
+rectangle 450 300 250 60
+circle 800 400 120
+# starting location and radius of the robot
+50 100 45
+# destination and radius marking the destination zone
+# taking the center point of the robot anywhere inside the destination zone would do
+1150 450 60
