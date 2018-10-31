@@ -52,26 +52,19 @@ public class Robot2D extends Circle2D {
     public void applyAction(Action action) {
         switch (action) {
             case MOVE_FORWARD:
-//                double dx = 1 * Math.cos(orientation);
-//                double dy = 1 * Math.sin(orientation);
-                //orientation += Math.toRadians(0);
+                orientation = Math.toRadians(0);
                 setCenter(new Point2D(getCenter().getX()+1, getCenter().getY()));
-                //setCenter(new Point2D(dx + getCenter().getX(), dy + getCenter().getY()));
                 break;
             case ROTATE_CCW:
-                //orientation += Math.toRadians(1);
-//                System.out.println("x one step back");
+                orientation = Math.toRadians(180);
                 setCenter(new Point2D(getCenter().getX()-1, getCenter().getY()));
-//                changeY=true;
                 break;
             case ROTATE_CW:
-                //orientation -= Math.toRadians(1);
-                //orientation -= 1;
+                orientation = Math.toRadians(270);
                 setCenter(new Point2D(getCenter().getX(), getCenter().getY()-1));
                 break;
             case ROTATE_UP:
-                //orientation += Math.toRadians(1);
-                //orientation -= 1;
+                orientation = Math.toRadians(90);
                 setCenter(new Point2D(getCenter().getX(), getCenter().getY()+1));
                 break;
         }
